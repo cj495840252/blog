@@ -1,0 +1,15 @@
+[package]
+name = "web"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dioxus = { workspace = true, features = ["router"] }
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
+ui = { workspace = true }
+
+[features]
+default = []
+web = ["dioxus/web"]
+server = ["dioxus/server"]

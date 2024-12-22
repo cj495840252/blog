@@ -1,0 +1,21 @@
+/* #指的是当前层级的组件 */
+#navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+#navbar a {
+  /* color: #ffffff; */
+  margin-right: 20px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#navbar a:hover {
+  cursor: pointer;
+  color: #91a4d2;
+}
+
+.border-bottom{
+    border-bottom: 2px solid #f3f4f6;
+}

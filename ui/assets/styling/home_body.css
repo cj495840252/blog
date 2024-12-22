@@ -1,0 +1,25 @@
+
+.test-t{
+    padding-top: 0px;
+    height: 90vh; /* Ensure the element takes the full height of the viewport */
+
+}
+
+
+@media (min-width: 640px) {
+    .sm\:pb-6 {
+        padding-bottom: 3.25rem;
+    }
+}
+
+.top-0 {
+    top: 15%;
+}
+
+.desc-font {
+    font-size: 1.5rem;
+}
+
+.bottom-1 {
+    bottom: 5%;
+}
