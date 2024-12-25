@@ -8,10 +8,11 @@ pub fn WebNavbar() -> Element {
 
     document::Link { rel: "stylesheet", href:  TAILWIND_CSS}
     document::Link { rel: "stylesheet", href:  NAVBAR_CSS}
-
+    // w-1/4 h-screen bg-gray-200 sticky top-0 p-4
     nav {
         class: "border-bottom bg-white border-gray-200 dark:bg-gray-900",
-        div { class: "max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4",
+        div {
+            class: "max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4",
             a {
                 // 跳转到当前网站的首页
                 href: "/",

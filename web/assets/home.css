@@ -4,3 +4,7 @@
     height: 90vh; /* Ensure the element takes the full height of the viewport */
     width: 100vw;  /* Ensure the element takes the full width of the viewport */
 }
+
+.top-0{
+    top: 0px;
+}

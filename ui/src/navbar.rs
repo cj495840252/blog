@@ -9,6 +9,7 @@ pub fn Navbar(children: Element) -> Element {
 
         div {
             id: "navbar",
+            class: "fixed",
             {children}
         }
     }

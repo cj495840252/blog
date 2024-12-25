@@ -5,8 +5,7 @@ const ECHO_CSS: Asset = asset!("/assets/styling/echo.css");
 /// Echo component that demonstrates fullstack server functions.
 #[component]
 pub fn Echo() -> Element {
-    let mut response = use_signal(|| String::new());
-
+    let mut response = use_signal(|| "".to_string());
     rsx! {
         document::Link { rel: "stylesheet", href: ECHO_CSS }
         div {

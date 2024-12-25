@@ -11,7 +11,7 @@ pub fn HomeBody() -> Element {
         document::Link { rel: "stylesheet", href: HOMEBODY_CSS }
 
         div {
-            class: "relative overflow-hidden bg-white ",
+            class: " relative overflow-hidden bg-white ",
             section {
                 class: "bg-zinc-50 overflow-hidden ",
                 div {

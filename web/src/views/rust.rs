@@ -1,4 +1,5 @@
 use dioxus::prelude::*;
+use ui::layout::ArticleHomeLayout;
 
 // const BLOG_CSS: Asset = asset!("/assets/about.css");
 
@@ -6,6 +7,6 @@ use dioxus::prelude::*;
 pub fn Rust() -> Element {
     rsx! {
         // document::Link { rel: "stylesheet", href: BLOG_CSS}
-        p { "随便写点占个位" }
+        ArticleHomeLayout {  }
     }
 }

@@ -6,3 +6,12 @@ use dioxus::prelude::*;
 pub async fn echo(input: String) -> Result<String, ServerFnError> {
     Ok(input)
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test() {
+        let a = "a";
+        assert!(a == "a");
+    }
+}
