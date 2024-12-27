@@ -3,12 +3,12 @@ name: build
 on:
   push:
     branches:
-      - master
+      - main
     tags:
-      - v*
+      - release-*
   pull_request:
     branches:
-      - master
+      - main
 
 permissions:
   contents: write
