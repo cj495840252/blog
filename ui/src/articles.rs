@@ -1,12 +1,10 @@
 use dioxus::prelude::*;
 
-use crate::TAILWIND_CSS;
+// use crate::TAILWIND_CSS;
 
 #[component]
 pub fn Articles() -> Element {
     rsx! {
-        document::Link { rel: "stylesheet", href: TAILWIND_CSS}
-
         div {
             class: "max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16",
             div { class: "border-b mb-5 flex justify-between text-sm",
@@ -40,9 +38,9 @@ pub fn Articles() -> Element {
             }
             div { class: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10",
                 div { class: "rounded overflow-hidden shadow-lg flex flex-col",
-                    a { href: "#" }
+                    // a { href: "/blog/1" }
                     div { class: "relative",
-                        a { href: "#",
+                        a { href: "/blog/1",
                             img {
                                 src: "https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500",
                                 alt: "Sunset in the mountains",
@@ -58,7 +56,7 @@ pub fn Articles() -> Element {
                     }
                     div { class: "px-6 py-4 mb-auto",
                         a {
-                            href: "#",
+                            href: "/blog/1",
                             class: "font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2",
                             "Simplest\n                  Salad Recipe ever"
                         }
@@ -95,23 +93,24 @@ pub fn Articles() -> Element {
                          }
                         a {
                             href: "#",
-                            span {
-                                class: "py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center",
-                                svg {
-                                    "viewBox": "0 0 24 24",
-                                    stroke: "currentColor",
-                                    fill: "none",
-                                    class: "h-5",
-                                    path {
-                                        "stroke-linejoin": "round",
-                                        "stroke-linecap": "round",
-                                        d: "M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z",
-                                        "stroke-width": "2",
-                                    }
+                        span {
+                            class: "py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center",
+                            svg {
+                                "viewBox": "0 0 24 24",
+                                stroke: "currentColor",
+                                fill: "none",
+                                class: "h-5",
+                                path {
+                                    "stroke-linejoin": "round",
+                                    "stroke-linecap": "round",
+                                    d: "M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z",
+                                    "stroke-width": "2",
                                 }
-                                span { class: "ml-1", "39 Comments" }
                             }
+                            span { class: "ml-1", "39 Comments" }
+                        }
                          }
+
                     }
                 }
                 div { class: "rounded overflow-hidden shadow-lg flex flex-col",
@@ -144,7 +143,6 @@ pub fn Articles() -> Element {
                     div { class: "px-6 py-3 flex flex-row items-center justify-between bg-gray-100",
                         a {
                             href: "#",
-
                             span {
                                 class: "py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center",
                                 svg {
@@ -187,7 +185,6 @@ pub fn Articles() -> Element {
                                 span { class: "ml-1", "0 Comments" }
                             }
                         }
-
                     }
                 }
                 div { class: "rounded overflow-hidden shadow-lg flex flex-col",
@@ -242,9 +239,9 @@ pub fn Articles() -> Element {
                                 }
                                 span { class: "ml-1", "16 hours ago" }
                             }
-                         }
 
-                        a {
+                        }
+                        a{
                             href: "#",
                             span {
                                 class: "py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center",
@@ -262,8 +259,7 @@ pub fn Articles() -> Element {
                                 }
                                 span { class: "ml-1", "9 Comments" }
                             }
-                         }
-
+                        }
                     }
                 }
             }

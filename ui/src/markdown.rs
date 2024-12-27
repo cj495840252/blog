@@ -11,7 +11,7 @@ pub struct MarkdownProps {
     content: ReadOnlySignal<String>,
 }
 
-const MARKDOWN_CSSS: Asset = asset!("/assets/styling/markdown.css");
+const MARKDOWN_CSSS: Asset = asset!("/assets/css/markdown.css");
 
 /// Render some text as markdown.
 #[component]

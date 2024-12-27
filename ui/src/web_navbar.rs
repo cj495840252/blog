@@ -1,11 +1,12 @@
 use super::TAILWIND_CSS;
 use dioxus::prelude::*;
 
-const NAVBAR_CSS: Asset = asset!("/assets/styling/navbar.css");
+const NAVBAR_CSS: Asset = asset!("/assets/css/navbar.css");
 #[component]
 pub fn WebNavbar() -> Element {
     rsx! {
 
+    // 所有的页面都具有这个导航栏，所以在这里添加一次TAILWIND_CSS
     document::Link { rel: "stylesheet", href:  TAILWIND_CSS}
     document::Link { rel: "stylesheet", href:  NAVBAR_CSS}
     // w-1/4 h-screen bg-gray-200 sticky top-0 p-4

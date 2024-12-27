@@ -6,12 +6,10 @@ use dioxus::prelude::*;
 pub fn Navbar() -> Element {
     rsx! {
         div {
-            id: "navbar",
             class: "z-10 sticky bg-white shadow-md",
             top:"0",
             ui::WebNavbar{}
         }
-
         Outlet::<Route> {}
     }
 }

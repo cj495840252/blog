@@ -5,15 +5,16 @@ use ui::Test;
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
 pub enum Route {
+
+    #[route("/test")]
+    Test{},
+
     #[layout(Navbar)]
     #[route("/")]
     Home {},
 
     #[route("/blog/:id")]
     Blog { id: i32 },
-
-    #[route("/test")]
-    Test{},
 
     #[route("/about")]
     About {},

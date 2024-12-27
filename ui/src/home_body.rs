@@ -1,13 +1,12 @@
 use dioxus::prelude::*;
 
-use crate::TAILWIND_CSS;
+// use crate::TAILWIND_CSS;
 
-const HOMEBODY_CSS: Asset = asset!("/assets/styling/home_body.css");
+const HOMEBODY_CSS: Asset = asset!("/assets/css/home_body.css");
 
 #[component]
 pub fn HomeBody() -> Element {
     rsx! {
-        document::Link { rel: "stylesheet", href: TAILWIND_CSS }
         document::Link { rel: "stylesheet", href: HOMEBODY_CSS }
 
         div {
@@ -17,7 +16,7 @@ pub fn HomeBody() -> Element {
                 div {
                     class: "max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-24 h-svh flex flex-col justify-center test-t",
                     p {
-                        class:"desc-font font-mono pointer-events-none fixed inset-x-0 top-0 sm:flex sm:justify-center sm:px-6 lg:px-8",
+                        class:"desc-font font-mono pointer-events-none fixed inset-x-0 top-0 sm:flex sm:justify-center sm:px-6 lg:px-8 z-10",
                         "Hello, Welcome my blog!" br {  }
                         "My name is Zack." br {  }
                         "I am a data engineer and a Rustaceans." br {  }

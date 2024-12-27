@@ -1,12 +1,8 @@
 use dioxus::prelude::*;
 
-use crate::TAILWIND_CSS;
-
 #[component]
 pub fn MenuSidebar() -> Element {
     rsx! {
-        document::Link { rel: "stylesheet", href: TAILWIND_CSS }
-
         ul {
             class: "flex flex-col gap-2 max-w-[280px] mx-auto mt-24",
             li {

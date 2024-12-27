@@ -1,6 +1,6 @@
 // use crate::Route;
 use dioxus::prelude::*;
-use ui::layout::ArticleDetaileLayout;
+use ui::article_detail::ArticleDetaileLayout;
 
 // const BLOG_CSS: Asset = asset!("/assets/blog.css");
 

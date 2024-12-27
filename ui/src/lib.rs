@@ -22,12 +22,15 @@ pub use home_body::HomeBody;
 pub mod markdown;
 pub use markdown::Markdown;
 
-pub mod layout;
-pub use layout::ArticleHomeLayout;
+pub mod article_home;
+pub use article_home::ArticleHomeLayout;
+
+pub mod article_detail;
+pub use article_detail::ArticleDetaileLayout;
 
 pub mod menu_sidebar;
 pub use menu_sidebar::MenuSidebar;
 
 pub mod articles;
 pub use articles::Articles;
-pub const TAILWIND_CSS: Asset = asset!("./assets/tailwind.css");
+pub const TAILWIND_CSS: Asset = asset!("./assets/css/tailwind.css");

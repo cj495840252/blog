@@ -1,14 +1,12 @@
 use dioxus::prelude::*;
-use tracing::{info, level_filters::LevelFilter};
-use tracing_subscriber::{fmt::Layer, layer::SubscriberExt, util::SubscriberInitExt, Layer as _};
+use tracing::{info, Level};
 mod router;
 mod views;
 
 use router::Route;
 
 fn main() {
-    let layer = Layer::default().with_filter(LevelFilter::INFO);
-    tracing_subscriber::registry().with(layer).init();
+    dioxus::logger::init(Level::INFO).unwrap();
     info!("App started: http://localhost:8080");
     dioxus::launch(App);
 }
