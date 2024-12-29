@@ -33,4 +33,14 @@ pub use menu_sidebar::MenuSidebar;
 
 pub mod articles;
 pub use articles::Articles;
+
+pub mod login;
+pub use login::Login;
+
+pub mod footer;
+pub use footer::Footer;
+
+pub mod file_upload;
+pub use file_upload::FileUpload;
+
 pub const TAILWIND_CSS: Asset = asset!("./assets/css/tailwind.css");

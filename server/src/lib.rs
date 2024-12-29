@@ -7,6 +7,11 @@ pub async fn echo(input: String) -> Result<String, ServerFnError> {
     Ok(input)
 }
 
+#[server(Upload)]
+pub async fn upload(input: String) -> Result<String, ServerFnError> {
+    Ok(input)
+}
+
 #[cfg(test)]
 mod tests {
     #[test]
