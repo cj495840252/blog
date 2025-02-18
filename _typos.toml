@@ -9,4 +9,5 @@ extend-exclude = [
     "target/*",
     "migrations/*",
     "notify_server/*.html",
+    "web/articles/*",
     ]

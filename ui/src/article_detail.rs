@@ -1,10 +1,21 @@
+use crate::{Markdown, MenuSidebar};
 use dioxus::prelude::*;
 
-use crate::{Markdown, MenuSidebar};
-
 #[component]
-pub fn ArticleDetaileLayout() -> Element {
+pub fn ArticleDetaileLayout(title: String) -> Element {
     let class = use_signal(|| "content".into());
+    let mut content = use_signal(|| "".to_string());
+    let _ = use_resource(move || {
+        let value = title.clone();
+        async move {
+            let response = reqwest::get(&format!("http://127.0.0.1:8080/articles/{}.md", value))
+                .await
+                .unwrap();
+            let text = response.text().await.unwrap();
+            content.set(text);
+        }
+    });
+
     rsx! {
         div {
             class: "flex",
@@ -17,7 +28,7 @@ pub fn ArticleDetaileLayout() -> Element {
                 div {
                     class: "container is-fluid",
                     Markdown {
-                        class :  class, content: include_str!("../../README.md")
+                        class :  class, content
                     }
                 }
             }

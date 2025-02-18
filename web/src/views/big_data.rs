@@ -1,25 +1,30 @@
 use dioxus::prelude::*;
+use ui::model::ArticleCard;
 use ui::ArticleHomeLayout;
-
-// const BLOG_CSS: Asset = asset!("/assets/about.css");
 
 #[component]
 pub fn BigData() -> Element {
+    let articles = vec![
+        ArticleCard::new(
+            "Java",
+            "Java".to_string(),
+            "description 1".to_string(),
+            "Java-logo.png".to_string(),
+        ),
+        ArticleCard::new(
+            "Flink",
+            "Flink".to_string(),
+            "description 2".to_string(),
+            "flink-logo.jpg".to_string(),
+        ),
+        ArticleCard::new(
+            "Kafka",
+            "Kafka".to_string(),
+            "description 3".to_string(),
+            "Kafka_logo.jpg".to_string(),
+        ),
+    ];
     rsx! {
-        // document::Link { rel: "stylesheet", href: BLOG_CSS}
-
-        ArticleHomeLayout {  }
-        // div {
-        //     class: "flex",
-        //     height: "100rem",
-        //     div {
-        //         class: "w-1/4 h-screen bg-gray-200 sticky top-0 p-4" ,
-        //         MenuSidebar {  }
-        //     }
-        //     div {
-        //         class: "w-3/4 bg-white p-4" ,
-
-        //     }
-        // }
+        ArticleHomeLayout { articles }
     }
 }

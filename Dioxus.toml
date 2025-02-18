@@ -16,7 +16,7 @@ asset_dir = "public"
 [web.app]
 # HTML title tag content
 title = "blog"
-base_url = "/Users/zackjchen/Desktop/RustProject/blog"
+base_url = "blog"
 
 [web.watcher]
 # when watcher trigger, regenerate the `index.html`
@@ -27,13 +27,6 @@ watch_path = ["src", "public"]
 # uncomment line below if using Router
 # index_on_404 = true
 
-# include `assets` in web platform
-[web.resource]
-# CSS style file
-style = []
-
-# Javascript code file
-script = []
 
 [web.resource.dev]
 
@@ -44,5 +37,3 @@ style = []
 
 # Javascript code file
 script = []
-
-

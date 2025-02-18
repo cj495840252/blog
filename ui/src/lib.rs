@@ -1,6 +1,6 @@
 //! This crate contains all shared UI for the workspace.
-
 mod hero;
+pub mod model;
 use dioxus::prelude::*;
 pub use hero::Hero;
 
@@ -31,9 +31,6 @@ pub use article_detail::ArticleDetaileLayout;
 pub mod menu_sidebar;
 pub use menu_sidebar::MenuSidebar;
 
-pub mod articles;
-pub use articles::Articles;
-
 pub mod login;
 pub use login::Login;
 
@@ -43,4 +40,6 @@ pub use footer::Footer;
 pub mod file_upload;
 pub use file_upload::FileUpload;
 
+pub mod article_card;
+pub use article_card::ArticleCard;
 pub const TAILWIND_CSS: Asset = asset!("./assets/css/tailwind.css");

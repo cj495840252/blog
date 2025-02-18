@@ -6,3 +6,8 @@ license = "Apache-2.0"
 
 [dependencies]
 dioxus = { workspace = true, features = ["fullstack"] }
+reqwest = { workspace = true }
+chrono = { workspace = true }
+serde = { workspace = true }
+# sqlx = { workspace = true }
+# axum = { workspace = true}

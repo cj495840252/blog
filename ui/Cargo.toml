@@ -8,3 +8,6 @@ license = "Apache 2.0"
 dioxus = { workspace = true }
 server = { workspace = true }
 pulldown-cmark = "0.9.3"
+chrono = { workspace=true, features = ["serde"] }
+serde = { workspace=true, features = ["derive"] }
+reqwest = { workspace = true }

@@ -1,4 +1,4 @@
-use crate::router::Route;
+use crate::router::frontend_router::FrontendRouter;
 use dioxus::prelude::*;
 /// A web-specific Router around the shared `Navbar` component
 /// which allows us to use the web-specific `Route` enum.
@@ -10,6 +10,6 @@ pub fn Navbar() -> Element {
             top:"0",
             ui::WebNavbar{}
         }
-        Outlet::<Route> {}
+        Outlet::<FrontendRouter> {}
     }
 }
