@@ -38,8 +38,13 @@ pub fn About() -> Element {
                     p { class: "text-md text-gray-700",
                         "\n                💬 "
                         span { class: "font-semibold", "评论功能未开放：" }
-                        " 懒得做这个。\n            "
+                        " 懒得做这个。以后完善后台的时候添加github authorization再看\n            "
                     }
+                    p { class: "text-md text-gray-700",
+                    "\n                🤔 "
+                    span { class: "font-semibold", "article的图片还不支持显示：" }
+                    "后续处理，还要换一下markdown的css风格，现在用了一个简单现成的"
+                }
                 }
                 p { class: "text-md text-gray-500 mb-8",
                     "\n            如果您有任何建议或问题，欢迎通过以下方式联系我们：\n        "
